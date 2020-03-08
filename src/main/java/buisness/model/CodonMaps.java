@@ -1,4 +1,4 @@
-package buisness;
+package buisness.model;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

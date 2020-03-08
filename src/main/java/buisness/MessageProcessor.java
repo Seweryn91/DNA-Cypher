@@ -2,6 +2,7 @@ package buisness;
 
 import GUI.PropertiesManager;
 import buisness.interfaces.*;
+import buisness.model.Message;
 
 import java.io.File;
 import java.io.IOException;

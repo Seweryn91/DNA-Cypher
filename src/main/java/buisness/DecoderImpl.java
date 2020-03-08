@@ -1,6 +1,7 @@
 package buisness;
 
 import buisness.interfaces.Decoder;
+import buisness.model.CodonMaps;
 
 import java.util.Map;
 

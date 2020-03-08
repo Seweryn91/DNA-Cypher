@@ -1,4 +1,4 @@
-package buisness;
+package buisness.model;
 
 public class Message {
 

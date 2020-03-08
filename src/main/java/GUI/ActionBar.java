@@ -1,6 +1,6 @@
 package GUI;
 
-import buisness.Message;
+import buisness.model.Message;
 import buisness.MessageProcessor;
 
 import javax.swing.*;

@@ -1,6 +1,7 @@
 package buisness;
 
 import buisness.interfaces.Encoder;
+import buisness.model.CodonMaps;
 
 import java.util.Map;
 import java.util.Random;
