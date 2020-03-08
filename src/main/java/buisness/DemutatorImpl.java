@@ -25,14 +25,11 @@ public class DemutatorImpl implements Demutator {
                 String replacement = mutation.substring(mutation.indexOf('>') - 1, symbolIndex);
                 mutatorBuilder = new StringBuilder(substitutor.substitute(index, replacement, sequence));
                 sequence = mutatorBuilder.toString();
-                System.out.println(sequence);
             }
 
             if (mutation.contains("inv")) {
-                System.out.println("inverter");
                 StringBuilder mutatorBuilder = new StringBuilder(sequence);
                 Inverter inverter = new InverterImpl();
-                System.out.println(sequence + " inverter");
                 int startIndex = Integer.parseInt(mutation.substring(0, mutation.indexOf('_')));
                 int endIndex = Integer.parseInt(mutation.substring(mutation.indexOf('_') + 1, mutation.indexOf("inv")));
                 mutatorBuilder = new StringBuilder(inverter.invert(startIndex, endIndex, sequence));
