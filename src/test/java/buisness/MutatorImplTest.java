@@ -66,21 +66,11 @@ class MutatorImplTest {
     @Test
     void testMutate_substitution() {
         String input = "IMPONDERABILIA";
-        String mutationKey = "7R>Z";
+        String mutationKey = "8R>Z";
         String expected = "IMPONDEZABILIA";
         String actual = mutator.mutate(mutationKey, input);
         assertEquals(expected, actual);
     }
-
-    @Test
-    void testMutate_translocation() {
-        String input = "IMPONDERABILIA";
-        String mutationKey = "4_9t11";
-        String expected = "IMPOBINDERALIA";
-        String actual = mutator.mutate(mutationKey, input);
-        assertEquals(expected, actual);
-    }
-
 
     @Test
     void testMutate_deletionAndDuplication() {
@@ -103,20 +93,12 @@ class MutatorImplTest {
     @Test
     void testMutate_deletionInsertionAndSubstitution() {
         String input = "GGCCAACCAGTAATAGTAATACAAACAGCGCAATACACAATAATACGAGTTACATCTTCCTTGCTGACGCTCGTCCCGCCTCCCATT";
-        String mutationKey = "75delC.39insT.11A>C";
+        String mutationKey = "75delC.39insT.12A>C";
         String expected = "GGCCAACCAGTCATAGTAATACAAACAGCGCAATACACATATAATACGAGTTACATCTTCCTTGCTGACGCTCGTCCGCCTCCCATT";
         String actual = mutator.mutate(mutationKey, input);
         assertEquals(expected, actual);
     }
 
-    @Test
-    void testMutate_allMutationsChecked() {
-        String input = "GGCCAACCAGTAATAGTAATACAAACAGCGCAATACACAATAATACGAGTTACATCTTCCTTGCTGACGCTCGTCCCGCCTCCCATT";
-        String mutationKey = "16delT.27dupG.76insA.40_73inv.47A>C.21_23t57";
-        String expected = "GGCCAACCAGTAATAGAATACACAGCCGCAATACACAAGCTCGCACTCGTTCCTTAACTACATTGAGCATAATTCCACGCCTCCCATT";
-        String actual = mutator.mutate(mutationKey, input);
-        assertEquals(expected, actual);
-    }
 
 
 
