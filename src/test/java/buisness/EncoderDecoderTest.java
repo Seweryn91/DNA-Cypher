@@ -81,7 +81,7 @@ public class EncoderDecoderTest {
     void testEncoderDecoder_stringWithSubstitutionAndInversion() {
         String input = "PETYR \"LITTLEFINGER\" BAELISH";
         String encoded = encoder.encode(input);
-        String mutationKey = "27T>A.37_76inv";
+        String mutationKey = "26T>A.37_76inv";
         String mutated = mutator.mutate(mutationKey, encoded);
         String demutated = demutator.demutate(mutationKey, mutated);
         String decoded = decoder.decode(demutated);

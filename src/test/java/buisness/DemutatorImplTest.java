@@ -50,7 +50,7 @@ class DemutatorImplTest {
     @Test
     void demutateTest_testSubstitution() {
         String input = "IMPINDERABILIA";
-        String mutationKey = "4O>I";
+        String mutationKey = "3O>I";
         String expected = "IMPONDERABILIA";
         String actual = demutator.demutate(mutationKey, input);
         assertEquals(expected, actual);
