@@ -27,7 +27,7 @@ public class TextFilePreparatorImpl implements TextFilePreparator {
 
     private boolean isCharAllowed(Character c) {
         Character[] allowedChars = {'.', ',', '\n', ':', ';', '\'', '\"', '+', '-', '=', '*', '?', '!', '%', '(', ')',
-                '/', ' ', '^'};
+                '/', ' ', '^', '@'};
         if (Character.isLetterOrDigit(c)) return true;
         else {
             for (Character allowedChar : allowedChars) {
