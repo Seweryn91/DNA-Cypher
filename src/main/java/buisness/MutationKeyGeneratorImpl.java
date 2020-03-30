@@ -7,7 +7,7 @@ import java.util.*;
 
 public class MutationKeyGeneratorImpl implements MutationKeyGenerator {
 
-    private PropertiesManager propertiesManager = new PropertiesManager();
+    private PropertiesManager propertiesManager;
     private Map<String, Boolean> mutationsAllowed;
 
 
