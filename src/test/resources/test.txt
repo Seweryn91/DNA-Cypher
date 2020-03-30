@@ -1,0 +1,8 @@
+This is a sample text file.
+It's purpose is to check if encoder/decoder works correctly.
+It would be nice if it included some alphanumeric characters like an alphabet:
+abcdefghijklmnopqrstuvwxyz. The other thing could be numbers 0123456789.
+How about some extra characters?
+Let's go with exclamation mark!
+Maybe some @ at this file with a sprinkle of **asterixes* and percentage % of carets ^, and (brackets).
+This +/- that = :) ;
