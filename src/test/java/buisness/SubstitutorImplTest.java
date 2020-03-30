@@ -24,4 +24,12 @@ class SubstitutorImplTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void testSubstitute_sentence() {
+        String input = "I like trains!";
+        String expected = "U like trains!";
+        String actual = substitutor.substitute(0, "U", input);
+        assertEquals(expected, actual);
+    }
+
 }
