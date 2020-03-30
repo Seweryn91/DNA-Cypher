@@ -9,7 +9,6 @@ class EncoderImplTest {
     private EncoderImpl encoder = new EncoderImpl();
 
     @Test
-
     void testEncode_withoutSpaces() {
         String input = "IMPONDERABILIA";
         String encoded = encoder.encode(input);
