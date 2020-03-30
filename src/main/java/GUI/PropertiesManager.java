@@ -84,4 +84,8 @@ public class PropertiesManager {
     public void clearProperties() {
         properties.clear();
     }
+
+    public void disableAll() {
+        properties.replaceAll( (key, value) -> value = false);
+    }
 }
