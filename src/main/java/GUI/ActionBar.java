@@ -31,7 +31,7 @@ public class ActionBar extends JDesktopPane implements ActionListener {
         toggleInvertions = new JCheckBox("Inversions");
         toggleSubstitutions = new JCheckBox("Substitutions");
         toggleTranslocations = new JCheckBox("Translocations");
-        toggleTranslocations.setEnabled(false);
+        toggleSubstitutions.setEnabled(false);
         java.util.List<JCheckBox> checkBoxes = new ArrayList<>();
         checkBoxes.add(toggleDeletions);
         checkBoxes.add(toggleDuplications);
@@ -64,6 +64,7 @@ public class ActionBar extends JDesktopPane implements ActionListener {
                 if (toggleInsertions.isSelected()) propertiesManager.enableInsertions();
                 if (toggleInvertions.isSelected()) propertiesManager.enableInversions();
                 if (toggleSubstitutions.isSelected()) propertiesManager.enableSubstitutions();
+                if (toggleTranslocations.isSelected()) propertiesManager.enableTranslocations();
                 MessageProcessor messageProcessor = new MessageProcessor();
                 Message message = messageProcessor.processEncoding(DataManager.getFile());
                 FileInfoBox.setMutationKeyValue(message.getKey());
