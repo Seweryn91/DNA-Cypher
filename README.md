@@ -77,4 +77,4 @@ Also, some special characters are removed during pre-processing of input text fi
 3.Adding special sequence of characters starting or ending uppercase/lowercase sequence, or substituting special characters. However this would increase numbers of possible errors.
 
 
-**TO DO:** Debug substitutor, so that it would not fail to decode propperly.
+**TO DO:** Debug substitutor, so that it would not fail to decode properly. Enable web-based support.
