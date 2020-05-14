@@ -38,7 +38,7 @@ Without knowing mutation key, it is virtually impossible to retrieve original me
 
 **How to run?**
 
-Just open repository in terminal and type ```mvn clean compile exex:java```
+Just open repository in terminal and type ```mvn clean compile exec:java```
 , popup window should appear.
 
 ***How to encode?***
