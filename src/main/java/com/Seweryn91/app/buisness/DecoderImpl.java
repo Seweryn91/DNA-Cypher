@@ -3,6 +3,7 @@ package com.Seweryn91.app.buisness;
 import com.Seweryn91.app.buisness.interfaces.Decoder;
 import com.Seweryn91.app.buisness.model.CodonMaps;
 
+import java.util.Arrays;
 import java.util.Map;
 
 public class DecoderImpl implements Decoder {
@@ -12,12 +13,11 @@ public class DecoderImpl implements Decoder {
     }
 
     private int findFirstStartCodon(String[] tripletArray) {
-        String[] startCodons = {"ATC", "GGT", "GGC"};
+        String[] startCodons = CodonMaps.START_CODONS;
 
         for (int i = 0; i < tripletArray.length; i++) {
             String starter = tripletArray[i];
-            if (starter.equals(startCodons[0]) || starter.equals(startCodons[1]) || starter.equals(startCodons[2]))
-                return i+1;
+            if (Arrays.stream(startCodons).anyMatch(starter::equals)) return i + 1;
         }
         return 0;
     }
