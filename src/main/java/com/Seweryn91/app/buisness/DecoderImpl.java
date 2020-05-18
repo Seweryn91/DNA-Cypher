@@ -13,7 +13,7 @@ public class DecoderImpl implements Decoder {
     }
 
     private int findFirstStartCodon(String[] tripletArray) {
-        String[] startCodons = CodonMaps.START_CODONS;
+        String[] startCodons = CodonMaps.startCodons;
 
         for (int i = 0; i < tripletArray.length; i++) {
             String starter = tripletArray[i];
