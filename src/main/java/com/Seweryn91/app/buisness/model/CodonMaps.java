@@ -3,6 +3,8 @@ package com.Seweryn91.app.buisness.model;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,9 +25,7 @@ public final class CodonMaps {
             String line = reader.readLine();
             while (line != null) {
                 String[] splitted = line.split("\\|");
-                if (splitted.length == 2) {
-                    encypheringMap.put(splitted[0], new String[]{splitted[1]});
-                } else encypheringMap.put(splitted[0], new String[]{splitted[1], splitted[2], splitted[3]});
+                encypheringMap.put(splitted[0], Arrays.copyOfRange(splitted, 1, splitted.length));
                 line = reader.readLine();
             }
             reader.close();
