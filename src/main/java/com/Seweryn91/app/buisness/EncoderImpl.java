@@ -32,14 +32,8 @@ public class EncoderImpl implements Encoder {
         for (String s : inputArray) {
             String[] array = encodingMap.get(s);
             Random random = new Random();
-
-            if (encodingMap.get(s).length > 1) {
-                String triplet = array[random.nextInt(array.length)];
-                outputSequenceBuilder.append(triplet);
-            } else {
-                String triplet = array[0];
-                outputSequenceBuilder.append(triplet);
-            }
+            String triplet = array[random.nextInt(array.length)];
+            outputSequenceBuilder.append(triplet);
         }
         return outputSequenceBuilder.toString();
     }
