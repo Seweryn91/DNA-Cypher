@@ -3,20 +3,23 @@ package com.Seweryn91.app.buisness.model;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class CodonMaps {
 
-    private Map<String, String[]> encypheringMap = new HashMap<>();
-    private Map<String, String> decypheringMap = new HashMap<>();
+    private static Map<String, String[]> encypheringMap = new HashMap<>();
+    private static Map<String, String> decypheringMap = new HashMap<>();
+    public static String[] startCodons = new String[3];
+
 
     public CodonMaps() {
         fillEncypheringMap();
         fillDecypheringMap();
     }
+
 
     private void fillEncypheringMap() {
         BufferedReader reader;
@@ -26,6 +29,9 @@ public final class CodonMaps {
             while (line != null) {
                 String[] splitted = line.split("\\|");
                 encypheringMap.put(splitted[0], Arrays.copyOfRange(splitted, 1, splitted.length));
+
+                if (splitted[0].equals("~")) startCodons = Arrays.copyOfRange(splitted, 1, splitted.length);
+
                 line = reader.readLine();
             }
             reader.close();
