@@ -41,12 +41,8 @@ public final class CodonMaps {
             String line = reader.readLine();
             while (line != null) {
                 String[] splitted = line.split("\\|");
-                if (splitted.length == 2) {
-                    decypheringMap.put(splitted[1], splitted[0]);
-                } else {
-                    decypheringMap.put(splitted[1], splitted[0]);
-                    decypheringMap.put(splitted[2], splitted[0]);
-                    decypheringMap.put(splitted[3], splitted[0]);
+                for (int i = 1; i < splitted.length; i++) {
+                    decypheringMap.put(splitted[i], splitted[0]);
                 }
                 line = reader.readLine();
             }
